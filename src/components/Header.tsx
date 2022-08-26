@@ -1,7 +1,13 @@
 import "./Header.css";
 
 const Header = () => {
-  return <div className="Header">Header works</div>;
+  return (
+    <header className="Header">
+      <h1>BucketList</h1>
+      <img src="" alt="logo" />
+      <button>Sign In</button>
+    </header>
+  );
 };
 
 export default Header;
