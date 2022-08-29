@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BucketListIdea from "../models/BucketListIdea";
 import BucketListItem from "../models/BucketListItem";
 import { fetchBucketList } from "../services/bucketListService";
+import Footer from "./Footer";
 import HomePage from "./HomePage";
 import BucketListContainer from "./BucketListContainer";
 
@@ -20,7 +21,11 @@ const Main = () => {
   return (
     <div className="Main">
       <HomePage />
+
       <BucketListContainer items={items} />
+
+      <Footer />
+
     </div>
   );
 };

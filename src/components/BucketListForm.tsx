@@ -13,11 +13,12 @@ const BucketListForm = () => {
     <form className="BucketListForm" onSubmit={(e) => handleSubmit(e)}>
       <label htmlFor="bucket-list-idea">Bucket List Idea</label>
       <input type="text" name="bucket-list-idea" id="bucket-list-idea" />
+
       <label htmlFor="date">Date</label>
       <input type="date" name="date" id="date" />
       <label htmlFor="consequences">Consequences</label>
       <input type="text" name="consequences" id="consequences" />
-      <button>Add</button>
+      <button className="Add">Add</button>
     </form>
   );
 };
