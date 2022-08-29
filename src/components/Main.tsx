@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BucketListIdea from "../models/BucketListIdea";
 import { fetchBucketList } from "../services/bucketListService";
+import Footer from "./Footer";
 import HomePage from "./HomePage";
 
 import "./Main.css";
@@ -16,6 +17,7 @@ const Main = () => {
   return (
     <div className="Main">
       <HomePage />
+      <Footer />
     </div>
   );
 };

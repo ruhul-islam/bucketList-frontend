@@ -1,0 +1,20 @@
+.Header {
+  position: absolute;
+
+  width: 100%;
+  background-color: #e39871;
+  color: #ffff;
+}
+
+.Title {
+  text-align: center;
+}
+
+img {
+  height: 25px;
+  width: 25px;
+}
+
+.HeaderButton {
+  position: absolute;
+}
