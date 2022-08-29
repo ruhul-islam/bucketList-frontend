@@ -1,7 +1,11 @@
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import "./BucketListForm.css";
 
 const BucketListForm = () => {
+  const [idea, setIdea] = useState("");
+  const [date, setDate] = useState("");
+  const [consequence, setConsequence] = useState("");
+
   const handleSubmit = (e: FormEvent): void => {
     e.preventDefault();
   };

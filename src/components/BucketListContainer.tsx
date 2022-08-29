@@ -1,7 +1,19 @@
+import BucketListItem from "../models/BucketListItem";
+import BucketListCard from "./BucketListCard";
 import "./BucketListContainer.css";
 
-const BucketListContainer = () => {
-  return <div className="BucketListContainer">BucketListContainer works</div>;
+interface Props {
+  items: BucketListItem[];
+}
+
+const BucketListContainer = ({ items }: Props) => {
+  return (
+    <ul className="BucketListContainer">
+      {items.map((item) => (
+        <BucketListCard item={item} key={item._id} />
+      ))}
+    </ul>
+  );
 };
 
 export default BucketListContainer;
