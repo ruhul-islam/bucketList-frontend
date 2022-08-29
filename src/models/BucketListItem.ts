@@ -5,6 +5,6 @@ export default interface BucketListItem {
   _id?: string;
   idea: string;
   date: string;
-  category: string;
+  category?: string;
   consequence: string;
 }

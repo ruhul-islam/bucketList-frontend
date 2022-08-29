@@ -4,13 +4,18 @@ import "./BucketListContainer.css";
 
 interface Props {
   items: BucketListItem[];
+  onDelete: (id: string) => void;
 }
 
-const BucketListContainer = ({ items }: Props) => {
+const BucketListContainer = ({ items, onDelete }: Props) => {
   return (
     <ul className="BucketListContainer">
       {items.map((item) => (
-        <BucketListCard item={item} key={item._id} />
+        <BucketListCard
+          item={item}
+          key={item._id}
+          onDelete={() => onDelete(item._id!)}
+        />
       ))}
     </ul>
   );

@@ -17,3 +17,14 @@ export const fetchBucketListIdea = async (): Promise<BucketListIdea> => {
 export const fetchBucketList = async (): Promise<BucketListItem[]> => {
   return (await axios.get(localURL)).data;
 };
+
+export const addBucketListItem = async (
+  item: BucketListItem
+): Promise<BucketListItem> => {
+  return (await axios.post(localURL, item)).data;
+};
+
+export const deleteById = async (id: string): Promise<void> => {
+  return (await axios.delete(`${localURL}/user/${encodeURIComponent(id)}`))
+    .data;
+};
