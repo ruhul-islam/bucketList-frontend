@@ -1,6 +1,7 @@
 .Header {
   position: absolute;
-
+  padding-left: 15px;
+  padding-right: 15px;
   width: 100%;
   background-color: #e39871;
   color: #ffff;

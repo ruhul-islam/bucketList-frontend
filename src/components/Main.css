@@ -3,5 +3,18 @@
   background-position: fill;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.FooterContainer {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  width: 100%;
+  display: flex;
 }

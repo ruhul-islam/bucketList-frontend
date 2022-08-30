@@ -44,8 +44,9 @@ const Main = () => {
       {/* <HomePage /> */}
       <BucketListForm onAdd={submitBucketListItem} />
       <BucketListContainer items={items} onDelete={deleteBucketListItem} />
-
-      <Footer />
+      <div className="FooterContainer">
+        <Footer />
+      </div>
     </div>
   );
 };
