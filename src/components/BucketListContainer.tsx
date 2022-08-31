@@ -10,11 +10,11 @@ interface Props {
 const BucketListContainer = ({ items, onDelete }: Props) => {
   return (
     <ul className="BucketListContainer">
-      {items.map((item) => (
+      {items.map((item, index) => (
         <BucketListCard
           item={item}
-          key={item._id}
-          onDelete={() => onDelete(item._id!)}
+          key={index}
+          onDelete={() => onDelete(index.toString())}
         />
       ))}
     </ul>
