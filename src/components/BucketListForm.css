@@ -1,9 +1,13 @@
 .BucketListForm {
   align-items: center;
-  padding: 160px;
+  padding: 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-left: 0;
-  margin-top: 40px;
+  margin-top: 160px;
+}
+
+#bucket-list-idea {
+  padding-left: 5px;
 }

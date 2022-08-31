@@ -12,18 +12,23 @@ const Header = () => {
         <img src={image} alt="list logo" />
         BucketList
       </h1>
-
-      {!user ? (
-        <button className="headerButton" onClick={signInWithGoogle}>
-          Sign In
-        </button>
-      ) : (
-        <div>
-          <button onClick={signOut}>Sign Out</button>
-          <p>{user.displayName}</p>
-          <img src={user.photoURL!} alt="user image" className="profile-img" />
-        </div>
-      )}
+      <div className="loginContainer">
+        {!user ? (
+          <button className="headerButton" onClick={signInWithGoogle}>
+            Sign In
+          </button>
+        ) : (
+          <div>
+            <button onClick={signOut}>Sign Out</button>
+            <p className="displayName">{user.displayName}</p>
+            <img
+              src={user.photoURL!}
+              alt="user image"
+              className="profile-img"
+            />
+          </div>
+        )}
+      </div>
     </header>
   );
 };

@@ -16,7 +16,7 @@ let quotes: string[] = [
   "A ship in harbor is safe, but that’s not what ships were built for. – John A. Shedd",
   "Like all great travelers, I have seen more than I remember, and remember more than I have seen. – Benjamin Disraeli",
   "Wellness encompasses a healthy body, a sound mind, and a tranquil spirit. Enjoy the journey as you strive for wellness. - Laurette Gagnon Beaulieu",
-  "Our bodies are our gardens – our wills are our gardeners.” – William Shakespeare",
+  "Our bodies are our gardens – our wills are our gardeners. – William Shakespeare",
   "I have chosen to be happy because it is good for my health. - Voltaire",
   "Self-care is not selfish. You cannot serve from an empty vessel. - Eleanor Brown",
   "It’s important to point out that mental health is more about wellness rather than sickness. – Matt Purcell",
