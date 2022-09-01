@@ -44,3 +44,10 @@ export const addFriend = async (uid: string): Promise<User> => {
     await axios.put(`${baseURL}/${encodeURIComponent(uid)}/following`, uid)
   ).data;
 };
+
+export const getFriendsByDisplayName = async (
+  search: string
+): Promise<User[]> => {
+  return (await axios.get(`${baseURL}/search/${encodeURIComponent(search)}`))
+    .data;
+};

@@ -5,8 +5,10 @@ import { useContext, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
 import { addNewUser, fetchUser } from "../services/userServices";
 import { User } from "firebase/auth";
+import { Link, useParams } from "react-router-dom";
 
 const Header = () => {
+  const uid: string | undefined = useParams().uid;
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
@@ -44,6 +46,11 @@ const Header = () => {
             />
           </div>
         )}
+      </div>
+      <div>
+        <Link to={`/${user?.uid}`}>
+          <button>User Profile</button>
+        </Link>
       </div>
     </header>
   );
