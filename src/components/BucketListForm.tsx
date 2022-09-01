@@ -56,6 +56,7 @@ const BucketListForm = ({ onAdd }: Props) => {
           id="bucket-list-idea"
           value={idea}
           onChange={(e) => setIdea(e.target.value)}
+          required
         />
         <button onClick={generateIdea} type="button" id="bucket-list-idea">
           Inspire me
@@ -69,6 +70,7 @@ const BucketListForm = ({ onAdd }: Props) => {
         id="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
+        required
       />
 
       <button className="Add">Add</button>

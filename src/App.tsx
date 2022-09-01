@@ -8,6 +8,9 @@ import {
 import Main from "./components/Main";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import UserProfile from "./components/UserProfile";
+import FriendsList from "./components/FriendsList";
+import SearchFriendForm from "./components/SearchFriendForm";
 
 function App() {
   return (
@@ -17,7 +20,13 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/gifs/search" element={<Main />} />
+          <Route path="/users/:search" element={<UserProfile />} />
+          <Route path="/:uid" element={<UserProfile />} />
+          {/* <Route path="/:uid/friends-list" element={<FriendsList />} /> */}
+          <Route
+            path="/:uid/friends-list/search"
+            element={<SearchFriendForm />}
+          />
           {/* <Route path="/gifs/:id/details" element={<Details />} />
          <Route path="/gifs/favorites" element={<Favorites />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
