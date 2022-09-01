@@ -4,8 +4,6 @@ import AuthContext from "../context/AuthContext";
 import BucketListIdea from "../models/BucketListIdea";
 import BucketListItem from "../models/BucketListItem";
 
-const { user } = useContext(AuthContext);
-
 const ninjaURL: string = "https://api.api-ninjas.com/v1/bucketlist";
 const baseURL: string = process.env.REACT_APP_API_URL || "";
 export const fetchBucketListIdea = async (): Promise<BucketListIdea> => {
@@ -32,6 +30,6 @@ export const deleteById = async (id: string): Promise<void> => {
   return (await axios.delete(`${baseURL}/user/${encodeURIComponent(id)}`)).data;
 };
 
-export const addUser = async (): Promise<void> => {
-  return (await axios.post(`${baseURL}/user`, user)).data;
-};
+// export const addUser = async (): Promise<void> => {
+//   return (await axios.post(`${baseURL}/user`, user)).data;
+// };

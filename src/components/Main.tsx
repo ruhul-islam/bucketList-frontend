@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import BucketListIdea from "../models/BucketListIdea";
 import BucketListItem from "../models/BucketListItem";
 import {
@@ -12,41 +12,56 @@ import BucketListContainer from "./BucketListContainer";
 
 import "./Main.css";
 import BucketListForm from "./BucketListForm";
+import AuthContext from "../context/AuthContext";
+import {
+  addBucketListItemForTheUser,
+  fetchUser,
+  removeBucketListItemForTheUser,
+} from "../services/userServices";
 
 const Main = () => {
+  const { user } = useContext(AuthContext);
+
   const [idea, setIdea] = useState<BucketListIdea>();
   const [items, setItems] = useState<BucketListItem[]>([]);
 
   const getAndSetBucketListItems = (): void => {
-    fetchBucketList().then((response) => {
-      setItems(response);
+    fetchUser(user!.uid).then((response) => {
+      setItems(response.bucketList!);
     });
   };
 
   const submitBucketListItem = (item: BucketListItem): void => {
-    addBucketListItem(item).then(() => {
+    addBucketListItemForTheUser(user!.uid, item).then(() => {
       getAndSetBucketListItems();
     });
   };
 
-  const deleteBucketListItem = (id: string): void => {
-    deleteById(id).then(() => {
+  const deleteBucketListItem = (idea: string): void => {
+    removeBucketListItemForTheUser(user!.uid, idea).then(() => {
       getAndSetBucketListItems();
     });
   };
 
   useEffect(() => {
-    getAndSetBucketListItems();
+    if (user) {
+      getAndSetBucketListItems();
+    }
+    console.log(user?.uid);
   }, []);
 
   return (
     <div className="Main">
-      {/* <HomePage /> */}
-      <BucketListForm onAdd={submitBucketListItem} />
-      <BucketListContainer items={items} onDelete={deleteBucketListItem} />
-      <div className="FooterContainer">
-        <Footer />
-      </div>
+      {user && (
+        <>
+          {/* <HomePage /> */}
+          <BucketListForm onAdd={submitBucketListItem} />
+          <BucketListContainer items={items} onDelete={deleteBucketListItem} />
+          <div className="FooterContainer">
+            <Footer />
+          </div>
+        </>
+      )}
     </div>
   );
 };
