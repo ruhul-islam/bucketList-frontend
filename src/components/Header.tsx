@@ -1,29 +1,13 @@
 import "./Header.css";
 import image from "../to-do-list(1).png";
 import { signInWithGoogle, signOut } from "../firebaseConfig";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
-import { addNewUser, fetchUser } from "../services/userServices";
-import { User } from "firebase/auth";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const uid: string | undefined = useParams().uid;
   const { user } = useContext(AuthContext);
 
-  useEffect(() => {
-    if (user) {
-      fetchUser(user.uid).then((response) => {
-        if (response === null) {
-          addNewUser({
-            uid: user.uid,
-            displayName: user.displayName!,
-            photoURL: user.photoURL!,
-          });
-        }
-      });
-    }
-  }, [user]);
   return (
     <header className="Header">
       <h1 className="Title">
