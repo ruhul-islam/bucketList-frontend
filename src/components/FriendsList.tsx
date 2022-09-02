@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import { useResolvedPath } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
 import User from "../models/User";
+import { addFriend } from "../services/userServices";
 import "./FriendsList.css";
 
 //print an array of users that matches UIDs
@@ -10,10 +13,19 @@ interface Props {
 }
 
 const FriendsList = ({ users }: Props) => {
+  const { user } = useContext(AuthContext);
+  const test = (myUid: string, friendUid: string) => {
+    addFriend(myUid, friendUid).then((response) => {
+      console.log(response, myUid);
+    });
+  };
   return (
     <ul className="FriendsList">
-      {users.map((user) => (
-        <li>{user.displayName} </li>
+      {users.map((item) => (
+        <div>
+          <li>{item.displayName} </li>
+          <button onClick={() => test(user?.uid!, item.uid)}>ADD</button>
+        </div>
       ))}
     </ul>
   );

@@ -39,9 +39,14 @@ export const removeBucketListItemForTheUser = async (
   ).data;
 };
 
-export const addFriend = async (uid: string): Promise<User> => {
+export const addFriend = async (
+  myUid: string,
+  friendUid: string
+): Promise<User> => {
   return (
-    await axios.put(`${baseURL}/${encodeURIComponent(uid)}/following`, uid)
+    await axios.put(`${baseURL}/${encodeURIComponent(myUid)}/following`, {
+      uid: friendUid,
+    })
   ).data;
 };
 
