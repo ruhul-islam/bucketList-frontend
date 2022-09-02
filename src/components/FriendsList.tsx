@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useResolvedPath } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import User from "../models/User";
-import { addFriend } from "../services/userServices";
+import { addFriend, removeFriend } from "../services/userServices";
 import "./FriendsList.css";
 
 //print an array of users that matches UIDs
@@ -13,20 +13,24 @@ interface Props {
 }
 
 const FriendsList = ({ users }: Props) => {
-  const { user } = useContext(AuthContext);
-  const test = (myUid: string, friendUid: string) => {
-    addFriend(myUid, friendUid).then((response) => {
-      console.log(response, myUid);
-    });
-  };
+  const { user, removeAFriend, addAFriend, isFriend } = useContext(AuthContext);
+  console.log(user);
+
   return (
     <ul className="FriendsList">
-      {users.map((item) => (
-        <div>
-          <li>{item.displayName} </li>
-          <button onClick={() => test(user?.uid!, item.uid)}>ADD</button>
-        </div>
-      ))}
+      {user &&
+        users.map((item) => (
+          <div key={item._id}>
+            <li>{item.displayName} </li>
+            {isFriend(user!, item.uid) ? (
+              <button onClick={() => removeAFriend(user, item.uid)}>
+                REMOVE
+              </button>
+            ) : (
+              <button onClick={() => addAFriend(user, item.uid)}>ADD</button>
+            )}
+          </div>
+        ))}
     </ul>
   );
 };

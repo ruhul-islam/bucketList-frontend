@@ -5,6 +5,6 @@ export default interface User {
   uid: string;
   displayName: string;
   photoURL: string;
-  following?: string[];
-  bucketList?: BucketListItem[];
+  following: string[];
+  bucketList: BucketListItem[];
 }

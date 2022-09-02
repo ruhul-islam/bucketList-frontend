@@ -50,6 +50,22 @@ export const addFriend = async (
   ).data;
 };
 
+export const removeFriend = async (
+  myUid: string,
+  friendUid: string
+): Promise<User> => {
+  return (
+    await axios.put(
+      `${baseURL}/${encodeURIComponent(myUid)}/following/${encodeURIComponent(
+        friendUid
+      )}`,
+      {
+        uid: friendUid,
+      }
+    )
+  ).data;
+};
+
 export const getFriendsByDisplayName = async (
   search: string
 ): Promise<User[]> => {
