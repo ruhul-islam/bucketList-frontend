@@ -10,20 +10,22 @@ const Header = () => {
 
   return (
     <header className="Header">
-      <div>
+      <div className="userProfileButtonContainer">
         <Link to={`/${user?.uid}`}>
           <button className="user">User Profile</button>
         </Link>
       </div>
       <h1 className="Title">
-        <img className="logo" src={image} alt="list logo" />
+        <Link to={"/"}>
+          <img className="logo" src={image} alt="list logo" />
+        </Link>
       </h1>
 
       <div className="loginContainer">
         {!user ? (
           <button onClick={signInWithGoogle}>Sign In</button>
         ) : (
-          <div>
+          <div className="innerLoginContainer">
             <button className="sign-out" onClick={signOut}>
               Sign Out
             </button>

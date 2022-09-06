@@ -2,16 +2,19 @@
   background-color: rgba(217, 174, 151, 0.87);
   text-shadow: 1px 1px 2px rgb(29, 19, 13);
   height: 80px;
-  width: 100%;
   bottom: 0px;
+  width: 100%;
   color: #fff;
-  font-size: small;
-  display: inline-flex;
+  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   font-family: "Aboreto", cursive;
   font-size: xx-small;
   position: fixed;
-  bottom: 0;
+}
+
+.Footer h2 {
+  padding-left: 30px;
+  padding-right: 40px;
 }

@@ -7,10 +7,12 @@
   align-items: center;
 }
 
-.FooterContainer {
-  position: absolute;
-  bottom: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
-  width: 100vh;
+button {
+  background-color: rgba(179, 122, 110, 0.7);
+  border: 0ch;
+  border: 1px dashed rgb(181, 184, 189, 0.5);
+  border-radius: 10px;
+  margin-left: 3%;
+  color: white;
+  text-shadow: 1px 1px 2px rgb(10, 7, 5);
 }

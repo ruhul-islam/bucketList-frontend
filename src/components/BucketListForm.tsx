@@ -81,6 +81,7 @@ const BucketListForm = ({ onAdd }: Props) => {
           type="date"
           name="date"
           id="date"
+          className="dateArea"
           value={date}
           onChange={(e) => setDate(e.target.value)}
           required

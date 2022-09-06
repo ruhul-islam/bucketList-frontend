@@ -14,3 +14,13 @@ h1,
   background-repeat: no-repeat;
   height: 100vh;
 }
+
+.FooterContainer {
+  position: absolute;
+  bottom: 0px;
+  margin: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+  display: inline-block;
+}

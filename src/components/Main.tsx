@@ -145,9 +145,6 @@ const Main = () => {
             onPublic={publicBucketListItem}
           />
           {/* <MyFriendsList /> */}
-          <div className="FooterContainer">
-            <Footer />
-          </div>
         </>
       )}
     </div>
