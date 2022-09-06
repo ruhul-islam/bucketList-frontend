@@ -11,6 +11,11 @@ export const fetchUser = async (uid: string): Promise<User> => {
   return (await axios.get(`${baseURL}/${encodeURIComponent(uid)}`)).data;
 };
 
+export const fetchFriends = async (uid: string): Promise<User[]> => {
+  return (await axios.get(`${baseURL}/friends/${encodeURIComponent(uid)}`))
+    .data;
+};
+
 export const addNewUser = async (user: User): Promise<User> => {
   return (await axios.post(baseURL, user)).data;
 };
@@ -30,11 +35,59 @@ export const addBucketListItemForTheUser = async (
 export const removeBucketListItemForTheUser = async (
   uid: string,
   idea: string
-): Promise<void> => {
+): Promise<string> => {
   return (
     await axios.put(
       `${baseURL}/${encodeURIComponent(uid)}/bucket-list/remove`,
-      idea
+      { idea: idea }
+    )
+  ).data;
+};
+
+export const completeBucketListItemForTheUser = async (
+  uid: string,
+  idea: string
+): Promise<string> => {
+  return (
+    await axios.put(
+      `${baseURL}/${encodeURIComponent(uid)}/bucket-list/complete`,
+      { idea: idea }
+    )
+  ).data;
+};
+
+export const incompleteBucketListItemForTheUser = async (
+  uid: string,
+  idea: string
+): Promise<string> => {
+  return (
+    await axios.put(
+      `${baseURL}/${encodeURIComponent(uid)}/bucket-list/incomplete`,
+      { idea: idea }
+    )
+  ).data;
+};
+
+export const privateBucketListItemForTheUser = async (
+  uid: string,
+  idea: string
+): Promise<string> => {
+  return (
+    await axios.put(
+      `${baseURL}/${encodeURIComponent(uid)}/bucket-list/private`,
+      { idea: idea }
+    )
+  ).data;
+};
+
+export const publicBucketListItemForTheUser = async (
+  uid: string,
+  idea: string
+): Promise<string> => {
+  return (
+    await axios.put(
+      `${baseURL}/${encodeURIComponent(uid)}/bucket-list/public`,
+      { idea: idea }
     )
   ).data;
 };
@@ -71,4 +124,8 @@ export const getFriendsByDisplayName = async (
 ): Promise<User[]> => {
   return (await axios.get(`${baseURL}/search/${encodeURIComponent(search)}`))
     .data;
+};
+
+export const getAllUsers = async (): Promise<User[]> => {
+  return (await axios.get(`${baseURL}/allUsers`)).data;
 };

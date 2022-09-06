@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useResolvedPath } from "react-router-dom";
+import { Link, useResolvedPath } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import User from "../models/User";
 import { addFriend, removeFriend } from "../services/userServices";
@@ -21,8 +21,12 @@ const FriendsList = ({ users }: Props) => {
       {user &&
         users.map((item) => (
           <div key={item._id}>
-            <li>{item.displayName} </li>
-            {isFriend(user!, item.uid) ? (
+            <Link to={"/"}>
+              <li>{item.displayName}</li>
+            </Link>
+            {user.uid === item.uid ? (
+              <></>
+            ) : isFriend(user!, item.uid) ? (
               <button onClick={() => removeAFriend(user, item.uid)}>
                 REMOVE
               </button>
