@@ -33,6 +33,9 @@ function App() {
          <Route path="/gifs/favorites" element={<Favorites />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <div className="FooterContainer">
+          <Footer />
+        </div>
       </Router>
     </div>
   );
