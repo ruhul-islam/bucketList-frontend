@@ -44,9 +44,6 @@ const UserProfile = () => {
   console.log(search);
   return (
     <div className="UserProfile">
-      <h2>place holder</h2>
-      <h2>place holder</h2>
-      <h2>place holder</h2>
       <h2>{user?.displayName}</h2>
 
       <img src={user?.photoURL!} alt="profile picture" width={200} />

@@ -1,5 +1,6 @@
 .Footer {
-  background-color: #e39871;
+  background-color: rgba(217, 174, 151, 0.87);
+  text-shadow: 1px 1px 2px rgb(29, 19, 13);
   height: 80px;
   width: 100%;
   bottom: 0px;
@@ -9,6 +10,8 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 0px;
-  padding: 0px;
+  font-family: "Aboreto", cursive;
+  font-size: xx-small;
+  position: fixed;
+  bottom: 0;
 }
