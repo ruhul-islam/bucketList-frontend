@@ -20,7 +20,6 @@ export const fetchFriends = async (uid: string): Promise<User[]> => {
 export const addNewUser = async (user: User): Promise<User> => {
   return (await axios.post(baseURL, user)).data;
 };
-``;
 
 export const addBucketListItemForTheUser = async (
   uid: string,
