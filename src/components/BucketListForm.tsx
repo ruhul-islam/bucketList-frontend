@@ -40,6 +40,8 @@ const BucketListForm = ({ onAdd }: Props) => {
       idea,
       date,
       consequence: consequences[random],
+      completed: false,
+      isPrivate: false,
     };
     onAdd(item);
     setIdea("");
@@ -82,6 +84,17 @@ const BucketListForm = ({ onAdd }: Props) => {
           value={date}
           onChange={(e) => setDate(e.target.value)}
           required
+        />
+
+        <label htmlFor="date">Date</label>
+        <input
+          type="date"
+          name="date"
+          id="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+          min={new Date().toISOString().split("T")[0]}
         />
 
         <button className="Add">Add</button>

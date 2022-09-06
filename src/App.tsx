@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import UserProfile from "./components/UserProfile";
 import FriendsList from "./components/FriendsList";
 import SearchFriendForm from "./components/SearchFriendForm";
+import FriendProfile from "./components/FriendProfile";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             path="/:uid/friends-list/search"
             element={<SearchFriendForm />}
           />
+          <Route path="/:uid/friends/friendUid" element={<FriendProfile />} />
           {/* <Route path="/gifs/:id/details" element={<Details />} />
          <Route path="/gifs/favorites" element={<Favorites />} /> */}
           <Route path="*" element={<Navigate to="/" />} />

@@ -45,7 +45,7 @@
   border: 0ch;
   border-radius: 5px;
 }
-
+/*applies globally, be specific*/
 h2,
 p {
   margin: 0;
@@ -53,4 +53,8 @@ p {
 
 p {
   font-size: medium;
+}
+
+.completed {
+  text-decoration: line-through;
 }

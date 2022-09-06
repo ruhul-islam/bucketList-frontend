@@ -3,4 +3,6 @@ export default interface BucketListItem {
   date: string;
   category?: string;
   consequence: string;
+  completed: false;
+  isPrivate: false;
 }
