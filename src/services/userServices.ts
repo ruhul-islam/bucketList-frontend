@@ -1,3 +1,4 @@
+import { async } from "@firebase/util";
 import axios from "axios";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
@@ -128,4 +129,15 @@ export const getFriendsByDisplayName = async (
 
 export const getAllUsers = async (): Promise<User[]> => {
   return (await axios.get(`${baseURL}/allUsers`)).data;
+};
+
+export const getFriendProfileDetails = async (
+  uid: string,
+  friendUid: string
+): Promise<User> => {
+  return await axios.get(
+    `${baseURL}/${encodeURIComponent(uid)}/friends/${encodeURIComponent(
+      friendUid
+    )}`
+  );
 };

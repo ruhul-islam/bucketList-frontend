@@ -28,7 +28,7 @@ function App() {
             path="/:uid/friends-list/search"
             element={<SearchFriendForm />}
           />
-          <Route path="/:uid/friends/friendUid" element={<FriendProfile />} />
+          <Route path="/:uid/friends/:friendUid" element={<FriendProfile />} />
           {/* <Route path="/gifs/:id/details" element={<Details />} />
          <Route path="/gifs/favorites" element={<Favorites />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
