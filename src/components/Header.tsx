@@ -15,11 +15,12 @@ const Header = () => {
           <button className="user">User Profile</button>
         </Link>
       </div>
-      <h1 className="Title">
-        <Link to={"/"}>
+
+      <Link to={"/"}>
+        <h1 className="Title">
           <img className="logo" src={image} alt="list logo" />
-        </Link>
-      </h1>
+        </h1>
+      </Link>
 
       <div className="loginContainer">
         {!user ? (
