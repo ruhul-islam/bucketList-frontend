@@ -1,6 +1,16 @@
+html,
 body,
+h1,
 .App,
 .Main {
   margin: 0px;
   padding: 0px;
+}
+
+.App {
+  background-image: url(../bl2-mobile.jpg);
+  background-position: fill;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }

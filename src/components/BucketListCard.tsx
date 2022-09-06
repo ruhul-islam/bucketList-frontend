@@ -9,10 +9,14 @@ interface Props {
 const BucketListCard = ({ item, onDelete }: Props) => {
   return (
     <li className="BucketListCard">
-      <h2>I will {item.idea}</h2>
-      <p>by {item.date}</p>
-      <p>or else {item.consequence}</p>
-      <button onClick={onDelete}>X</button>
+      <div className="card-content">
+        <button className="x" onClick={onDelete}>
+          X
+        </button>
+        <h2>I will {item.idea}</h2>
+        <p>by {item.date}</p>
+        <p>or else {item.consequence}</p>
+      </div>
     </li>
   );
 };

@@ -1,0 +1,56 @@
+.BucketListContainer {
+  /* align-items: center;
+  justify-content: center; */
+  margin-top: -100px;
+  padding-left: 3px;
+  width: 100%;
+}
+
+.BucketListCard {
+  box-shadow: 1px 1px 2px rgb(29, 19, 13, 0.8);
+  padding: 10px;
+  font-family: "Amatic SC", cursive;
+  text-shadow: 1px 1px 2px rgb(10, 7, 5);
+  position: relative;
+  font-size: small;
+  color: white;
+  background-color: rgba(171, 97, 58, 0.9);
+  width: 100px;
+  height: 200px;
+  list-style-type: none;
+  flex-wrap: wrap;
+  margin: 5px;
+  border-radius: 20px;
+  padding: 10px;
+  padding-bottom: 0px;
+  align-content: center;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: start;
+}
+
+.x {
+  text-shadow: 1px 1px 2px rgba(178, 131, 106);
+  color: rgba(178, 131, 106);
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0ch;
+  border-radius: 5px;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+p {
+  font-size: medium;
+}

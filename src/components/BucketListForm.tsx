@@ -48,32 +48,44 @@ const BucketListForm = ({ onAdd }: Props) => {
 
   return (
     <form className="BucketListForm" onSubmit={(e) => handleSubmit(e)}>
-      <div>
-        <label htmlFor="bucket-list-idea">Bucket List Idea</label>
-        <input
-          type="text"
+      <label className="bucket-list-form-title" htmlFor="bucket-list-idea">
+        Bucket List Idea
+      </label>
+      <div className="text-area-and-inspo-button">
+        <textarea
+          className="idea-form"
           name="bucket-list-idea"
           id="bucket-list-idea"
+          rows={5}
+          cols={30}
           value={idea}
           onChange={(e) => setIdea(e.target.value)}
           required
-        />
-        <button onClick={generateIdea} type="button" id="bucket-list-idea">
+        ></textarea>
+        <button
+          className="inspire-button"
+          onClick={generateIdea}
+          type="button"
+          id="bucket-list-idea"
+        >
           Inspire me
         </button>
       </div>
+      <label className="complete-by-input-title" htmlFor="date">
+        Complete By:{" "}
+      </label>
+      <div className="complete-by-input-and-button">
+        <input
+          type="date"
+          name="date"
+          id="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+        />
 
-      <label htmlFor="date">Date</label>
-      <input
-        type="date"
-        name="date"
-        id="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-        required
-      />
-
-      <button className="Add">Add</button>
+        <button className="Add">Add</button>
+      </div>
     </form>
   );
 };

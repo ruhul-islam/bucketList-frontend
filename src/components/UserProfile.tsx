@@ -23,9 +23,6 @@ const UserProfile = () => {
 
   return (
     <div className="UserProfile">
-      <h2>place holder</h2>
-      <h2>place holder</h2>
-      <h2>place holder</h2>
       <h2>{user?.displayName}</h2>
       <p>{user?.email} </p>
       <img src={user?.photoURL!} alt="profile picture" width={200} />
