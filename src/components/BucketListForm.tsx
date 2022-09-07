@@ -8,15 +8,16 @@ interface Props {
   onAdd: (item: BucketListItem) => void;
 }
 let consequences: string[] = [
-  "Go bowling by myself",
-  "Go to a children's movie in the theater by myself",
-  "Watch Shrek in French",
-  "Scroll through your ex's entire Instagram",
-  "Find the most embarrassing picture of yourself and post it",
-  "Drink an entire monster energy drink",
-  "Wear your shoes on the wrong feet for 3 hours",
-  "Get rickrolled on 0.5 speed",
+  "go bowling by myself",
+  "go to a children's movie in the theater by myself",
+  "watch Shrek in French",
+  "scroll through your ex's entire Instagram",
+  "find the most embarrassing picture of yourself and post it",
+  "drink an entire monster energy drink",
+  "wear my shoes on the wrong feet for 3 hours",
+  "get rickrolled on 0.5 speed",
   "confess my darkest secret to my worst enemy",
+  "stand in line at Starbucks but don't move when it's my turn",
 ];
 
 const BucketListForm = ({ onAdd }: Props) => {

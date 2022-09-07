@@ -10,15 +10,19 @@ const Header = () => {
 
   return (
     <header className="Header">
-      <div className="userProfileButtonContainer">
-        <Link to={`/${user?.uid}`}>
-          <button className="user">User Profile</button>
-        </Link>
-      </div>
+      {user && (
+        <div className="userProfileButtonContainer">
+          <Link to={`/${user?.uid}`}>
+            <button className="user">User Profile</button>
+          </Link>
+        </div>
+      )}
 
       <Link to={"/"}>
         <h1 className="Title">
-          <img className="logo" src={image} alt="list logo" /> Vive
+
+          <img className="logo" src={image} alt="list logo" loading="lazy" /> Vive
+
         </h1>
       </Link>
 
@@ -35,6 +39,7 @@ const Header = () => {
               src={user.photoURL!}
               alt="user image"
               className="profile-img"
+              loading="lazy"
             />
             <p className="displayName">{user.displayName} </p>
           </div>

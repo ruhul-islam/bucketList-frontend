@@ -39,7 +39,9 @@ const BucketListCard = ({
         )}
       </div>
       <div className="card-content">
-        <h2 className={completedClass}>I will {item.idea}</h2>
+        <h2 className={completedClass}>
+          I will {item.idea.charAt(0).toLowerCase() + item.idea.slice(1)}
+        </h2>
         <p>by {item.date}</p>
         <p>or else {item.consequence}</p>
 
