@@ -8,3 +8,16 @@
   align-content: center;
   justify-content: center;
 }
+
+@media (min-width: 768px) {
+  .BucketListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    width: 95%;
+    align-content: center;
+    justify-content: center;
+  }
+}
