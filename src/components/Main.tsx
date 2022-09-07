@@ -132,7 +132,7 @@ const Main = () => {
 
   return (
     <div className="Main">
-      {user && (
+      {user ? (
         <>
           {/* <HomePage /> */}
           <BucketListForm onAdd={submitBucketListItem} />
@@ -144,8 +144,9 @@ const Main = () => {
             onPrivate={privateBucketListItem}
             onPublic={publicBucketListItem}
           />
-          {/* <MyFriendsList /> */}
         </>
+      ) : (
+        <p>Not Signed In</p>
       )}
     </div>
   );

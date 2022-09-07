@@ -1,6 +1,8 @@
 import BucketListItem from "../models/BucketListItem";
 import BucketListCard from "./BucketListCard";
 import "./BucketListContainer.css";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import "animate.css";
 
 interface Props {
   items: BucketListItem[];
@@ -20,19 +22,30 @@ const BucketListContainer = ({
   onPublic,
 }: Props) => {
   return (
-    <ul className="BucketListContainer">
-      {items.map((item, index) => (
-        <BucketListCard
-          item={item}
-          key={index}
-          onDelete={() => onDelete(item.idea)}
-          onComplete={() => onComplete(item.idea)}
-          onIncomplete={() => onIncomplete(item.idea)}
-          onPrivate={() => onPrivate(item.idea)}
-          onPublic={() => onPublic(item.idea)}
-        />
-      ))}
-    </ul>
+    <div className="BucketListContainer">
+      <TransitionGroup component="ul">
+        {items.map((item, index) => (
+          <CSSTransition
+            key={index}
+            classNames={{
+              enterActive: "animate__animated animate__fadeIn",
+              exitActive: "animate__animated animate__fadeOut",
+            }}
+            timeout={1000}
+          >
+            <BucketListCard
+              item={item}
+              key={index}
+              onDelete={() => onDelete(item.idea)}
+              onComplete={() => onComplete(item.idea)}
+              onIncomplete={() => onIncomplete(item.idea)}
+              onPrivate={() => onPrivate(item.idea)}
+              onPublic={() => onPublic(item.idea)}
+            />
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
+    </div>
   );
 };
 
