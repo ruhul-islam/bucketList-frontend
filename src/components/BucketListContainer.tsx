@@ -1,8 +1,8 @@
 import BucketListItem from "../models/BucketListItem";
 import BucketListCard from "./BucketListCard";
 import "./BucketListContainer.css";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "animate.css";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 interface Props {
   items: BucketListItem[];
