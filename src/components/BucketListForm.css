@@ -4,6 +4,10 @@
   width: 400px;
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 10px;
 }
 
 .bucket-list-form-title {
@@ -67,6 +71,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-left: 10px;
   }
 }
 
