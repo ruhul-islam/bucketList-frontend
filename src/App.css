@@ -7,14 +7,6 @@ h1,
   padding: 0px;
 }
 
-.App {
-  background-image: url(../bl2-mobile.jpg);
-  background-position: fill;
-  background-size: cover;
-  background-repeat: repeat;
-  height: 100vh;
-}
-
 .FooterContainer {
   position: absolute;
   bottom: 0px;

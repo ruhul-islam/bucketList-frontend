@@ -17,13 +17,8 @@
   padding-bottom: 0px;
   display: flex;
   align-items: stretch;
-
-
-
   font-family: "Manrope", sans-serif;
-
   justify-content: center;
-
 }
 
 .card-content {
@@ -49,10 +44,10 @@
 }
 /*applies globally, be specific*/
 .BucketListCard h2 {
-
   font-family: "Playfair Display", serif;
   font-size: large;
   margin: 1px;
+  text-align: center;
 }
 
 .BucketListCard p {
@@ -61,10 +56,6 @@
 
   text-align: center;
 }
-
-
-
-
 
 .symbol-buttons {
   position: absolute;
@@ -78,7 +69,7 @@
   text-decoration: line-through;
 }
 #completed {
-  background-color: rgba(161, 185, 203, 0.9);
+  background-color: rgba(114, 118, 127, 0.9);
 }
 
 @media (min-width: 768px) {
