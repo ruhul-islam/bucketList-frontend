@@ -7,6 +7,12 @@
   width: 60%;
   align-content: center;
   justify-content: center;
+  margin-bottom: 200px;
+}
+
+.BucketListContainer ul {
+  margin: 0px;
+  padding: 0px;
 }
 
 @media (min-width: 768px) {
@@ -19,5 +25,13 @@
     width: 95%;
     align-content: center;
     justify-content: center;
+  }
+
+  .BucketListContainer ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 250px;
   }
 }

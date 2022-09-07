@@ -42,8 +42,8 @@ const BucketListCard = ({
         <h2 className={completedClass}>
           I will {item.idea.charAt(0).toLowerCase() + item.idea.slice(1)}
         </h2>
-        <p>by {item.date}</p>
-        <p>or else {item.consequence}</p>
+        <p>By {item.date}...</p>
+        <p>...or else {item.consequence}</p>
 
         <div className="public-private"></div>
         {item.isPrivate ? (

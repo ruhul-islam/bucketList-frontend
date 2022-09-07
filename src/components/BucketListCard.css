@@ -7,16 +7,26 @@
   color: white;
   background-color: rgba(171, 97, 58, 0.9);
   width: 90%;
-  height: 200px;
+  height: 250px;
   list-style-type: none;
   flex-wrap: wrap;
-  margin: 10px;
   border-radius: 20px;
+  padding: 15px;
   padding-bottom: 0px;
   display: flex;
   align-items: stretch;
   font-family: "Manrope", sans-serif;
   justify-content: center;
+}
+
+li.BucketListCard {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 10px;
 }
 
 .card-content {
@@ -42,7 +52,7 @@
 /*applies globally, be specific*/
 .BucketListCard h2 {
   font-family: "Playfair Display", serif;
-  font-size: large;
+  font-size: 21px;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -71,9 +81,10 @@
 @media (min-width: 768px) {
   .BucketListCard {
     position: relative;
+    padding: 30px;
     font-size: 20px;
     width: 25%;
-    height: 200px;
+    height: 280px;
     list-style-type: none;
     flex-wrap: wrap;
     border-radius: 20px;
@@ -84,6 +95,8 @@
   li.BucketListCard {
     display: flex;
     justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .BucketListCard h2 {
