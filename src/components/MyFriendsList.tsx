@@ -40,7 +40,7 @@ const MyFriendsList = ({ users }: Props) => {
               ))}
           </>
         ) : (
-          <p> NO friend</p>
+          <p>No Friends Added Yet </p>
         )}
       </>
     </div>

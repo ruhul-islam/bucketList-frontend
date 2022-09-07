@@ -1,0 +1,23 @@
+.SearchFriendForm {
+  margin-top: 40px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 215px;
+}
+
+.SearchFriendForm input {
+  height: 25px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  border: 0ch;
+  border: 1px solid rgb(92, 62, 43);
+  padding: 2px;
+}
+
+.SearchFriendForm button {
+  margin-left: 0px;
+  margin-top: 5px;
+  height: 25px;
+}
