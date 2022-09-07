@@ -23,13 +23,19 @@ const BucketListCard = ({
     completedClass = "completed";
   }
   return (
-    <li className="BucketListCard">
+    <li className="BucketListCard" id={completedClass}>
       <div className="symbol-buttons">
-        <button onClick={onDelete}>X</button>
+        <button onClick={onDelete} id={completedClass}>
+          X
+        </button>
         {item.completed ? (
-          <button onClick={onIncomplete}>Undo</button>
+          <button onClick={onIncomplete} id={completedClass}>
+            Undo
+          </button>
         ) : (
-          <button onClick={onComplete}>✔</button>
+          <button onClick={onComplete} id={completedClass}>
+            ✔
+          </button>
         )}
       </div>
       <div className="card-content">
@@ -41,9 +47,13 @@ const BucketListCard = ({
 
         <div className="public-private"></div>
         {item.isPrivate ? (
-          <button onClick={onPublic}>Make Public</button>
+          <button onClick={onPublic} id={completedClass}>
+            Make Public
+          </button>
         ) : (
-          <button onClick={onPrivate}>Make Private</button>
+          <button onClick={onPrivate} id={completedClass}>
+            Make Private
+          </button>
         )}
       </div>
     </li>
