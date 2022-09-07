@@ -18,7 +18,7 @@ const Header = () => {
 
       <Link to={"/"}>
         <h1 className="Title">
-          <img className="logo" src={image} alt="list logo" />
+          <img className="logo" src={image} alt="list logo" /> Vive
         </h1>
       </Link>
 

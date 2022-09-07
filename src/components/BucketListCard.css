@@ -1,19 +1,17 @@
 .BucketListCard {
   position: relative;
   box-shadow: 1px 1px 2px rgb(29, 19, 13, 0.8);
-  padding: 10px;
   font-family: "Amatic SC", cursive;
   text-shadow: 1px 1px 2px rgb(10, 7, 5);
   font-size: 20px;
   color: white;
   background-color: rgba(171, 97, 58, 0.9);
   width: 90%;
-  height: 300px;
+  height: 200px;
   list-style-type: none;
   flex-wrap: wrap;
-  margin: 5px;
+  margin: 10px;
   border-radius: 20px;
-  padding: 10px;
   padding-bottom: 0px;
   display: flex;
   align-items: stretch;
@@ -27,7 +25,6 @@
   justify-content: space-evenly;
   text-align: start;
   align-items: center;
-  padding: 3px;
 }
 
 .X {
@@ -46,14 +43,13 @@
 .BucketListCard h2 {
   font-family: "Playfair Display", serif;
   font-size: large;
-  margin: 1px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .BucketListCard p {
-  margin: 2px;
   font-size: small;
-
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -74,28 +70,27 @@
 
 @media (min-width: 768px) {
   .BucketListCard {
-    box-shadow: 1px 1px 2px rgb(29, 19, 13, 0.8);
-    font-family: "Amatic SC", cursive;
-    text-shadow: 1px 1px 2px rgb(10, 7, 5);
     position: relative;
     font-size: 20px;
-    color: white;
-    background-color: rgba(171, 97, 58, 0.9);
-    width: 30%;
-    height: 350px;
+    width: 25%;
+    height: 200px;
     list-style-type: none;
     flex-wrap: wrap;
-    margin: 8px;
     border-radius: 20px;
-    padding: 5px;
     display: flex;
-    align-items: stretch;
-    align-content: stretch;
     justify-content: center;
   }
 
   li.BucketListCard {
     display: flex;
     justify-content: center;
+  }
+
+  .BucketListCard h2 {
+    margin-bottom: 0;
+  }
+
+  .BucketListCard p {
+    margin: -3px;
   }
 }
