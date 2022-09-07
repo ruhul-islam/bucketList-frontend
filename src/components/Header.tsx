@@ -20,7 +20,9 @@ const Header = () => {
 
       <Link to={"/"}>
         <h1 className="Title">
-          <img className="logo" src={image} alt="list logo" loading="lazy" />
+
+          <img className="logo" src={image} alt="list logo" loading="lazy" /> Vive
+
         </h1>
       </Link>
 

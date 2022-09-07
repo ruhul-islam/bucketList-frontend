@@ -32,6 +32,11 @@ header button {
   justify-content: center;
 }
 
+.Header a {
+  color: white;
+  text-decoration: none;
+}
+
 .userProfileButtonContainer,
 .loginContainer {
   margin-left: 15px;
