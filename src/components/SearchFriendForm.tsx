@@ -12,7 +12,7 @@ const SearchFriendForm = () => {
   };
   return (
     <form className="SearchFriendForm" onSubmit={handleSubmit}>
-      <label htmlFor="search">Search</label>
+      <label htmlFor="search"></label>
       <input
         type="text"
         name="search"
@@ -20,7 +20,7 @@ const SearchFriendForm = () => {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button>Search</button>
+      <button>Search for Friends</button>
     </form>
   );
 };

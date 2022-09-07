@@ -20,7 +20,11 @@ const MyFriendsList = ({ users }: Props) => {
             {user &&
               users.map((item) => (
                 <div key={item._id}>
-                  <Link to={"/"}>
+                  <Link
+                    to={`/${encodeURIComponent(
+                      user.uid
+                    )}/friends/${encodeURIComponent(item.uid)}`}
+                  >
                     <li>{item.displayName}</li>
                   </Link>
                   {user.uid === item.uid ? (
@@ -36,7 +40,7 @@ const MyFriendsList = ({ users }: Props) => {
               ))}
           </>
         ) : (
-          <p> NO friend</p>
+          <p>No Friends Added Yet </p>
         )}
       </>
     </div>

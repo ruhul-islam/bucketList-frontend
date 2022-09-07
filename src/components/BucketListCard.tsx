@@ -23,6 +23,7 @@ const BucketListCard = ({
     completedClass = "completed";
   }
   return (
+
     <li className="BucketListCard">
       <div className="symbol-buttons">
         <button onClick={onDelete}>X</button>
@@ -43,6 +44,8 @@ const BucketListCard = ({
         ) : (
           <button onClick={onPrivate}>Make Private</button>
         )}
+
+
       </div>
     </li>
   );

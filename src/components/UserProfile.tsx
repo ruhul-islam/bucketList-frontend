@@ -44,9 +44,10 @@ const UserProfile = () => {
   console.log(search);
   return (
     <div className="UserProfile">
-      <h2>{user?.displayName}</h2>
-
-      <img src={user?.photoURL!} alt="profile picture" width={200} />
+      <div className="NestedUserProfileContainer">
+        <img src={user?.photoURL!} alt="profile picture" width={200} />
+        <h2>{user?.displayName}</h2>
+      </div>
       <SearchFriendForm />
       <FriendsList users={users} />
       <MyFriendsList users={userFriends} />

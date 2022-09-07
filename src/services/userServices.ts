@@ -1,3 +1,4 @@
+import { async } from "@firebase/util";
 import axios from "axios";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
@@ -19,7 +20,6 @@ export const fetchFriends = async (uid: string): Promise<User[]> => {
 export const addNewUser = async (user: User): Promise<User> => {
   return (await axios.post(baseURL, user)).data;
 };
-``;
 
 export const addBucketListItemForTheUser = async (
   uid: string,
@@ -129,4 +129,15 @@ export const getFriendsByDisplayName = async (
 
 export const getAllUsers = async (): Promise<User[]> => {
   return (await axios.get(`${baseURL}/allUsers`)).data;
+};
+
+export const getFriendProfileDetails = async (
+  uid: string,
+  friendUid: string
+): Promise<User> => {
+  return await axios.get(
+    `${baseURL}/${encodeURIComponent(uid)}/friends/${encodeURIComponent(
+      friendUid
+    )}`
+  );
 };
