@@ -1,31 +1,46 @@
 .LoggedOutMain li {
   text-decoration: none;
   list-style: none;
-  border: 2px solid black;
+  border: 2px solid rgba(114, 118, 127, 0.7);
+  border-radius: 5px;
   margin: 20px;
+  padding: 10px;
+  background-color: rgba(217, 174, 151, 0.7);
 }
 
 .LoggedOutMain .container {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* justify-items: stretch; */
-  /* align-items: stretch; */
+  align-items: center;
   height: 80vh;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
-.LoggedOutMain .newsfeed-container {
-  flex: 1;
-  border: 5px solid yellow;
+.LoggedOutMain h2 {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
-.LoggedOutMain .testimonials-container {
+.LoggedOutMain {
   flex: 1;
-  border: 5px solid yellow;
+}
+
+.LoggedOutMain .vive-img {
+  height: 300px;
+  width: 300px;
+  margin-top: 10px;
+  border-radius: 50%;
+  border: solid 3px rgba(179, 122, 110);
 }
 
 @media (min-width: 768px) {
   .LoggedOutMain .container {
     flex-direction: row;
+  }
+  .LoggedOutMain .vive-img {
+    margin-left: 25px;
   }
 }
