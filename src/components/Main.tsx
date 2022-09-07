@@ -23,6 +23,7 @@ import {
   removeBucketListItemForTheUser,
 } from "../services/userServices";
 import MyFriendsList from "./MyFriendsList";
+import LoggedOutMain from "./LoggedOutMain";
 
 const Main = () => {
   const { user } = useContext(AuthContext);
@@ -146,7 +147,7 @@ const Main = () => {
           />
         </>
       ) : (
-        <p>Not Signed In</p>
+        <LoggedOutMain />
       )}
     </div>
   );
