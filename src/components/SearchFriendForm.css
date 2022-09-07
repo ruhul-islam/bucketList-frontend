@@ -1,9 +1,17 @@
 .SearchFriendForm {
-  margin-top: 40px;
-  margin-left: 20px;
+  /* margin-top: 40px;
+  margin-left: 20px;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 200px;
   display: flex;
   flex-direction: column;
-  width: 215px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 10px;
 }
 
 .SearchFriendForm input {

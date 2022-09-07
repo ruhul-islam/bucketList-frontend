@@ -1,4 +1,5 @@
 import "./LoggedOutMain.css";
+import VIVE from "../VIVE-img.png";
 
 let newsfeed: string[] = [
   "Greg visited Mount Rushmore and didn't have to scroll through his ex's Instagram!",
@@ -8,9 +9,9 @@ let newsfeed: string[] = [
 
 let testimonials: string[] = [
   `"Vive has helped me get out of my comfort zone and start living life again!" -David, Tampa`,
-  `"I worked up the courage to finally go scuba diving, and that's where I met my husband. Thanks for the adventures, Vive!" -Mary, Boston`,
+  `"I worked up the courage to finally go scuba diving, and that's where I met my wife. Thanks for the adventures, Vive!" -Mary, Boston`,
   `"I always had big dreams to go backpacking in Europe, but I never got around to it. Vive helped make my dream a reality. 5 stars!" -Katerina, Boise`,
-  `"I was supposed to go kayaking in the Grand Canyon by September 01, 2022. I didn't get around to doing it, so I had to wear my shoes on the wrong feet for three hours. I wish I had chosen to do the adventure instead!" -Kyle, Detroit`,
+  `"I was supposed to go kayaking in the Grand Canyon by September 01, 2022. I didn't get around to doing it, so I had to wear my shoes on the wrong feet for three hours. It was hilarious- All my coworkers decided to get on the app and add eachother after watching me waddle around the office." -Kyle, Detroit`,
 ];
 
 const LoggedOutMain = () => {
@@ -27,12 +28,7 @@ const LoggedOutMain = () => {
   return (
     <div className="LoggedOutMain">
       <div className="container">
-        <div className="newsfeed-container">
-          <h2>News Feed</h2>
-          {selected.map((i) => (
-            <li>{i}</li>
-          ))}
-        </div>
+        <img src={require("../VIVE.png")} className="vive-img" />
         <div className="testimonials-container">
           <h2>Testimonials</h2>
           {selectedTestimonials.map((i) => (

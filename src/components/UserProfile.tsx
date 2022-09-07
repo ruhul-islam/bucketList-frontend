@@ -48,7 +48,9 @@ const UserProfile = () => {
         <img src={user?.photoURL!} alt="profile picture" width={200} />
         <h2>{user?.displayName}</h2>
       </div>
-      <SearchFriendForm />
+      <div className="friend-search-form-box">
+        <SearchFriendForm />
+      </div>
       <FriendsList users={users} />
       <MyFriendsList users={userFriends} />
     </div>
