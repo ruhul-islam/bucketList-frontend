@@ -18,7 +18,8 @@
   display: flex;
   align-items: stretch;
   align-content: stretch;
-  justify-content: center;
+
+  font-family: "Manrope", sans-serif;
 }
 
 .card-content {
@@ -41,15 +42,25 @@
   border-radius: 5px;
 }
 /*applies globally, be specific*/
-h2,
-p {
-  margin: 0;
+.BucketListCard h2 {
+  font-family: "Playfair Display", serif;
+  font-size: large;
+  margin: 1px;
 }
 
-p {
-  font-size: medium;
+.BucketListCard p {
+  margin: 2px;
+  font-size: small;
 }
 
+.symbol-buttons {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
 .completed {
   text-decoration: line-through;
 }

@@ -24,20 +24,24 @@ const BucketListCard = ({
   }
   return (
     <li className="BucketListCard">
+      <div className="symbol-buttons">
+        <button onClick={onDelete}>X</button>
+        {item.completed ? (
+          <button onClick={onIncomplete}>Undo</button>
+        ) : (
+          <button onClick={onComplete}>✔</button>
+        )}
+      </div>
       <div className="card-content">
         <h2 className={completedClass}>I will {item.idea}</h2>
         <p>by {item.date}</p>
         <p>or else {item.consequence}</p>
-        <button onClick={onDelete}>X</button>
-        {item.completed ? (
-          <button onClick={onIncomplete}>Incomplete</button>
-        ) : (
-          <button onClick={onComplete}>Complete</button>
-        )}
+
+        <div className="public-private"></div>
         {item.isPrivate ? (
-          <button onClick={onPublic}>Public</button>
+          <button onClick={onPublic}>Make Public</button>
         ) : (
-          <button onClick={onPrivate}>Private</button>
+          <button onClick={onPrivate}>Make Private</button>
         )}
       </div>
     </li>
