@@ -41,6 +41,7 @@ function AuthContextProvider({ children }: { children: ReactNode }) {
         fetchUser(newUser.uid).then((response) => {
           if (response === null) {
             const newPerson = {
+              email: newUser.email!,
               uid: newUser.uid,
               displayName: newUser.displayName!,
               photoURL: newUser.photoURL!,
