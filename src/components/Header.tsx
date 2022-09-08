@@ -1,5 +1,6 @@
 import "./Header.css";
 import image from "../to-do-list(1).png";
+import imageLogo from "../bucketListLogo-unscreen(1).gif";
 import { signInWithGoogle, signOut } from "../firebaseConfig";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
@@ -19,11 +20,17 @@ const Header = () => {
       )}
 
       <Link to={"/"}>
-        <h1 className="Title">
-
-          <img className="logo" src={image} alt="list logo" loading="lazy" /> Vive
-
-        </h1>
+        <div className="logo-container">
+          <h1 className="Title">
+            <img
+              className="logo"
+              src={imageLogo}
+              alt="list logo"
+              loading="lazy"
+            />
+          </h1>
+          <h1 className="logo-name">Vive</h1>
+        </div>
       </Link>
 
       <div className="loginContainer">

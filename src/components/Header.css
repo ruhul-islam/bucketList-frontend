@@ -16,6 +16,18 @@ img {
   width: 30px;
 }
 
+.Header h1 img {
+  height: 80px;
+  width: 110px;
+  padding-top: 10px;
+}
+
+.Header .logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 header button {
   background-color: rgba(179, 122, 110, 0.7);
   border-radius: 30px;
@@ -70,5 +82,16 @@ header button {
 @media (min-width: 768px) {
   .Header {
     height: 100px;
+  }
+  .Header h1 img {
+    padding-top: 10px;
+    height: 110px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Header .logo-name {
+    display: none;
   }
 }

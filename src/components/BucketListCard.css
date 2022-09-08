@@ -7,7 +7,7 @@
   color: white;
   background-color: rgba(171, 97, 58, 0.9);
   width: 90%;
-  height: 250px;
+  height: 320px;
   list-style-type: none;
   flex-wrap: wrap;
   border-radius: 20px;
@@ -106,4 +106,63 @@ li.BucketListCard {
   .BucketListCard p {
     margin: -3px;
   }
+}
+
+.expired-notice {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+}
+
+.expired-notice > span {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+/* .expired-notice > p {
+  font-size: 1.5rem;
+} */
+
+/* .show-counter {
+  padding: 0.5rem;
+} */
+
+.show-counter .countdown-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  /* padding: 0.5rem; */
+  border: 1px solid white;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: lightgreen;
+}
+
+.show-counter .countdown {
+  line-height: 1.25rem;
+  padding: 0 0.5rem 0 0.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-counter .countdown.danger {
+  color: #ff0000;
+}
+
+.show-counter .countdown > p {
+  margin: 0;
+}
+
+.show-counter .countdown > span {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  line-height: 1rem;
 }
