@@ -1,6 +1,6 @@
 import "./Header.css";
 import image from "../to-do-list(1).png";
-import imageLogo from "../bucketListLogo-unscreen-1.gif";
+import imageLogo from "../to-do-list(1).png";
 import { signInWithGoogle, signOut } from "../firebaseConfig";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";

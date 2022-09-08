@@ -36,8 +36,10 @@ header button {
   height: 30px;
 }
 
-.logo {
+.Header .logo {
   margin-top: 10px;
+  height: 30px;
+  width: 30px;
 }
 
 .Title {

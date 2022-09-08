@@ -25,7 +25,7 @@ const MyFriendsList = ({ users }: Props) => {
                       user.uid
                     )}/friends/${encodeURIComponent(item.uid)}`}
                   >
-                    <li>
+                    <li className="user-card">
                       <h3>{item.displayName}</h3>
                       <img
                         src={item.photoURL}
