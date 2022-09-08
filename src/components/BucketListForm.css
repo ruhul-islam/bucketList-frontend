@@ -8,12 +8,13 @@
   padding: 10px;
   border-radius: 15px;
   margin-top: 10px;
+  font-size: 18px;
+  text-shadow: 2px 2.2px 2px rgb(29, 19, 13);
 }
 
 .bucket-list-form-title {
   margin-left: 30%;
   color: white;
-  text-shadow: 1px 1px 2px rgb(29, 19, 13);
 }
 
 .text-area-and-inspo-button {
@@ -45,7 +46,6 @@
   text-align: center;
   margin-right: 15%;
   color: white;
-  text-shadow: 1px 1px 2px rgb(29, 19, 13);
 }
 
 .complete-by-input-and-button {
