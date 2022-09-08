@@ -1,29 +1,53 @@
 .MyFriendsList {
-  color: white;
-  text-shadow: 1px 1px 2px rgb(10, 7, 5);
-  display: flex;
-  flex-direction: column;
+  background-color: rgba(148, 165, 190, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 30px;
+  margin: 20px;
+  list-style: none;
+  font-size: 20px;
+  border: 1px solid rgb(92, 62, 43);
 }
-
-.MyFriendsList .user-card {
+.MyFriendsList .friend-card {
   position: relative;
   box-shadow: 1px 1px 2px rgb(29, 19, 13, 0.8);
   font-family: "Amatic SC", cursive;
   text-shadow: 1px 1px 2px rgb(10, 7, 5);
   font-size: 20px;
   color: white;
-  background-color: rgba(171, 97, 58, 0.9);
-  width: 25%;
-  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 75%;
+  height: 200px;
   list-style-type: none;
   flex-wrap: wrap;
   border-radius: 20px;
   padding: 15px;
   padding-bottom: 0px;
-  display: flex;
-  align-items: stretch;
+  margin: 10px;
   font-family: "Manrope", sans-serif;
+  text-align: center;
+}
+
+.MyFriendsList a {
+  color: rgba(171, 97, 58, 0.9);
+  text-decoration: none;
+}
+
+.MyFriendsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+
+.MyFriendsList h2 {
+  padding-left: 10px;
+}
+
+.MyFriendsList img {
+  border-radius: 20px;
+  border: 2px solid white;
+  font-size: 10px;
 }
 
 @media (min-width: 768px) {

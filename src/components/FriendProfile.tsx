@@ -26,16 +26,19 @@ const FriendProfile = () => {
 
   return (
     <div className="FriendProfile">
-      <h2>Name: {friend?.displayName}</h2>
       <img src={friend?.photoURL} alt="photo" />
+      <h2>{friend?.displayName}'s Bucket List</h2>
       <ul>
         {friendsItems.map((item) => {
           if (item.isPrivate === false) {
             return (
-              <li>
-                <p>{item.idea}</p>
-                <p>{item.date}</p>
-                <p>{item.consequence}</p>
+              <li className="card-content">
+                <p>
+                  Plans to{" "}
+                  {item.idea.charAt(0).toLowerCase() + item.idea.slice(1)}
+                </p>
+                <p>by {item.date}</p>
+                <p>or else... {item.consequence}</p>
               </li>
             );
           }

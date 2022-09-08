@@ -17,10 +17,10 @@ const FriendsList = ({ users }: Props) => {
   console.log(user);
 
   return (
-    <ul className="FriendsList">
+    <ul className={users.length ? "FriendsList user-container" : ""}>
       {user &&
         users.map((item) => (
-          <div key={item._id}>
+          <div key={item._id} className="user-card">
             <Link
               to={`/${encodeURIComponent(
                 user.uid

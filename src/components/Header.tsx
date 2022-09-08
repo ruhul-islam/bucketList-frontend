@@ -1,6 +1,6 @@
 import "./Header.css";
-import image from "../to-do-list(1).png";
-import imageLogo from "../to-do-list(1).png";
+
+import imageLogo from "../logo-white-shadow.png";
 import { signInWithGoogle, signOut } from "../firebaseConfig";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
@@ -29,7 +29,7 @@ const Header = () => {
               loading="lazy"
             />
           </h1>
-          <h1 className="logo-name">Vive</h1>
+          <h1 className="logo-name">VIVE</h1>
         </div>
       </Link>
 

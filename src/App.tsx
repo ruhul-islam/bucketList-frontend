@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <button onClick={topFunction} id="myBtn" title="Go to top">
-        TOP
+        ^
       </button>
       <Router>
         <Header />

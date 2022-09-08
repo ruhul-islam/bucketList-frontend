@@ -19,13 +19,13 @@ const MyFriendsList = ({ users }: Props) => {
           <>
             {user &&
               users.map((item) => (
-                <div key={item._id}>
+                <div key={item._id} className="friend-card">
                   <Link
                     to={`/${encodeURIComponent(
                       user.uid
                     )}/friends/${encodeURIComponent(item.uid)}`}
                   >
-                    <li className="user-card">
+                    <li>
                       <h3>{item.displayName}</h3>
                       <img
                         src={item.photoURL}

@@ -1,0 +1,42 @@
+.FriendProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FriendProfile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+.FriendProfile .card-content {
+  position: relative;
+  box-shadow: 1px 1px 2px rgb(29, 19, 13, 0.8);
+  font-family: "Amatic SC", cursive;
+  text-shadow: 1px 1px 2px rgb(10, 7, 5);
+  font-size: 20px;
+  color: white;
+  background-color: rgba(171, 97, 58, 0.9);
+  width: 90%;
+  height: 320px;
+  list-style-type: none;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  padding: 15px;
+  padding-bottom: 0px;
+  display: flex;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  justify-content: center;
+  margin: 10px;
+}
+
+.FriendProfile h2 {
+  color: white;
+  text-shadow: 1px 1px 2px rgb(10, 7, 5);
+  margin-bottom: -5px;
+}
