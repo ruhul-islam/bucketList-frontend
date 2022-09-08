@@ -62,15 +62,14 @@ const BucketListCard = ({
         )}
       </div>
       <div className="card-content">
-        <p>
-          <CountdownTimer targetDate={dateTimeAfterThreeDays} />
-        </p>
         <h2 className={completedClass}>
           I will {item.idea.charAt(0).toLowerCase() + item.idea.slice(1)}
         </h2>
         <p>By {item.date}...</p>
         <p>...or else {item.consequence}</p>
-
+        <p>
+          <CountdownTimer targetDate={dateTimeAfterThreeDays} />
+        </p>
         <div className="public-private"></div>
         {item.isPrivate ? (
           <button onClick={onPublic} id={completedClass}>
